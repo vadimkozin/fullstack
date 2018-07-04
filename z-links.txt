@@ -1,0 +1,19 @@
+
+Аутентификация Node-приложений при помощи Passport
+https://code.tutsplus.com/ru/tutorials/authenticating-nodejs-applications-with-passport--cms-21619
+
+Аутентификация на Node-приложении: регистрация пользователя
+https://code.tutsplus.com/ru/tutorials/site-authentication-in-nodejs-user-sign-up--cms-29933
+
+Обзор способов и протоколов аутентификации в веб-приложениях
+https://habr.com/company/dataart/blog/262817/
+
+---
+JSON Web Token
+https://ru.wikipedia.org/wiki/JSON_Web_Token
+
+jwt.io - можно декодировать или создать токен
+
+Аутентификация с помощью JSON Web Token
+https://ifmo.su/jwt
+---
