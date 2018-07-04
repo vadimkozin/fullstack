@@ -2,6 +2,6 @@
 .vscode
 .env
 node_modules
-config/keys.js
-uploads/*
+uploads/*.jpg
+uploads/*.png
 client/etc/
