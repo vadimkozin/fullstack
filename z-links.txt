@@ -1,3 +1,5 @@
+документация по node на русском
+https://js-node.ru/
 
 Аутентификация Node-приложений при помощи Passport
 https://code.tutsplus.com/ru/tutorials/authenticating-nodejs-applications-with-passport--cms-21619
@@ -17,3 +19,15 @@ jwt.io - можно декодировать или создать токен
 Аутентификация с помощью JSON Web Token
 https://ifmo.su/jwt
 ---
+
+Записная книжка по Angular, git, js
+https://bxnotes.ru/
+
+Обработка ошибок в Node.js
+https://habr.com/post/222761/
+
+загрузка файлов на сервер с использованием node.js и multer  
+https://evdokimovm.github.io/javascript/nodejs/expressjs/multer/2016/11/03/Upload-files-to-server-using-NodeJS-and-Multer-package-filter-upload-files-by-extension.html
+
+загрузка image на сервер с использованием node.js, express и multer
+https://alligator.io/nodejs/uploading-files-multer-express/

@@ -1,0 +1,15 @@
+cd client
+// страница входа
+ng g c login-page --spec false
+mkdir /src/app/app-module.routing.ts
+
+//// создаём лояут для логина/регистрации
+// создаст папку src/app/shared/layouts/auth-layout/
+// и в ней три файла 
+ng g c shared/layouts/auth-layout --spec false
+
+//// создаём лояут для сайта
+ng g c shared/layouts/site-layout --spec false
+
+// страницв регистрации
+ng g c register-page --spec false

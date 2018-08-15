@@ -1,0 +1,5 @@
+
+<button (click)="getUsers()">Пользователи</button>
+<ul>
+  <li *ngFor="let user of users$ | async; let i=index"> {{i}}. {{user.email}}</li>
+</ul>

@@ -7,13 +7,17 @@ const analyticsRouter = require('./routes/analitics')
 const categoryRouter = require('./routes/category')
 const orderRouter = require('./routes/order')
 const positionRouter = require('./routes/position')
+const userRouter = require('./routes/user')
 //const keys = require('./config/keys')
 
 const app = express()
+
 //mongoose.connect(keys.mongoURI)
-mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log('MongoDB connected'))
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true })
+    .then(() => console.log('MongoDB connected.'))
     .catch((error) => console.error(error))
+
+// require('./db')
 
 app.use(passport.initialize())
 require('./middleware/passport')(passport)
@@ -29,5 +33,7 @@ app.use('/api/analitics', analyticsRouter)
 app.use('/api/category', categoryRouter)
 app.use('/api/order', orderRouter)
 app.use('/api/position', positionRouter)
+
+app.use('/api/users', userRouter)   // временно для тестирования 
 
 module.exports = app
