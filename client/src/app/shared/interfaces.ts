@@ -1,3 +1,5 @@
+import { Data } from "../../../node_modules/@angular/router";
+
 export interface User {
     email: string,
     password: string
@@ -12,4 +14,34 @@ export interface Category {
     imageSrc?: string,  // картинку можно и не вводить
     user?: string,      // юзер будет известен на бэкэнде
     _id?: string        // _id будет известен только после создания записи на бэкэнде
+}
+
+export interface Position {
+    name: string,
+    cost: number,
+    user?: string,
+    category: string,
+    _id?: string,
+    quantity?: number
+}
+
+export interface OrderPosition {
+    name: string
+    cost: number
+    quantity: number
+    _id?: string
+}
+
+export interface Order {
+    date?: Date
+    order?: number
+    user?: string
+    list: OrderPosition[]
+    _id?: string
+}
+
+export interface Filter {
+    order?: number
+    start?: Date
+    end?: Date
 }

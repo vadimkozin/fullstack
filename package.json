@@ -9,7 +9,9 @@
     "server2": "./kill_proc_port_5000.sh && nodemon index",
     "client-install": "npm install --prefix client",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev2": "concurrently \"npm run server2\" \"npm run client\""
+
   },
   "keywords": [
     "mongo",
