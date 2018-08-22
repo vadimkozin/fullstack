@@ -1,4 +1,4 @@
-import { Data } from "../../../node_modules/@angular/router";
+import { Data } from "@angular/router";
 
 export interface User {
     email: string,
@@ -45,3 +45,16 @@ export interface Filter {
     start?: Date
     end?: Date
 }
+
+export interface OwerviewPageItem {
+    percent: number
+    compare: number
+    yesterday: number
+    isHigher: boolean
+}
+
+export interface OwerviewPage {
+    gain : OwerviewPageItem
+    orders : OwerviewPageItem
+}
+
