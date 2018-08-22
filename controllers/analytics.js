@@ -62,8 +62,28 @@ module.exports.overview = async (req, res) => {
     }
 }
 
-module.exports.analytics = (req, res) => {
+module.exports.analytics = async (req, res) => {
+    try {
+        // все заказы пользователя, отсортированные по дате
+        const allOrders = await Order.find({user: req.user.id}).sort({data: 1})
+        // карта заказов, где ключи - это дни в формате "dd.MM.yyyy"
+        const ordersMap = getOrdersMap(allOrders)
+        // средний чек
+        const average = +(calculatePrice(allOrders) / Object.keys(ordersMap).length).toFixed(2)
 
+        const chart = Object.keys(ordersMap).map(label => {
+            // label == 05.05.2018
+            const gain = calculatePrice(ordersMap[label])   // выручка за один день
+            const order = ordersMap[label].length           // кол-во заказов за день
+
+            return {label, order, gain}
+        })
+
+        res.status(200).json({average, chart})  // средний чек и данные для графиков: выручки и заказов
+
+    } catch (e) {
+        errorHandler(res, e)
+    }
 }
 
 function getOrdersMap(orders = []) {
