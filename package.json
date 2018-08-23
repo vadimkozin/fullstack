@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "node index",
+    "start_prod": "NODE_ENV=production node index",
     "server": "nodemon index",
     "server2": "./kill_proc_port_5000.sh && nodemon index",
     "client-install": "npm install --prefix client",
