@@ -6,3 +6,4 @@ uploads/*.jpg
 uploads/*.png
 client/etc/
 config/keys.dev.js
+.set_env_heroku.sh
