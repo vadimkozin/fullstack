@@ -14,16 +14,17 @@ import { CategoriesPageComponent } from "./categories-page/categories-page.compo
 import { CategoriesFormComponent } from "./categories-page/categories-form/categories-form.component";
 import { OrderCategoriesComponent } from "./order-page/order-categories/order-categories.component";
 import { OrderPositionsComponent } from "./order-page/order-positions/order-positions.component";
+import { NotFoundPageComponent } from "./not-found-page/not-found-page.component";
 
 const routes: Routes = [
-    //{path: 'login', component: LoginPageComponent}
+    
     {
         path: '', component: AuthLayoutComponent, children: [
             { path: '', redirectTo: '/login', pathMatch: 'full' },
             { path: 'login', component: LoginPageComponent },
             { path: 'register', component: RegisterPageComponent },
 
-            { path: 'users', component: UserPageComponent}  // временно
+            { path: 'users', component: UserPageComponent}  // временно            
         ]
     },
     {
@@ -38,10 +39,10 @@ const routes: Routes = [
             { path: 'categories', component: CategoriesPageComponent},
             { path: 'categories/new', component: CategoriesFormComponent},
             { path: 'categories/:id', component: CategoriesFormComponent},
-
-
-
         ]
+    },
+    {
+        path: '**', component: NotFoundPageComponent
     }
     
 ]
