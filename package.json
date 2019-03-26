@@ -4,8 +4,8 @@
   "description": "sample fullstack app",
   "main": "index.js",
   "engines": {
-    "node": "10.5.0",
-    "npm": "6.3.0"
+    "node": "10.15.3",
+    "npm": "6.4.1"
   },
   "scripts": {
     "start": "node index",
@@ -16,7 +16,8 @@
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "dev2": "concurrently \"npm run server2\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build-prod --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build-prod --prefix client",
+    "client-bild-prod": "npm run build --prod --prefix client"
   },
   "keywords": [
     "mongo",
